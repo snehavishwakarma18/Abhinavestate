@@ -5,43 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhinav Estates | Premium Real Estate Mumbai | 33 Years of Trust</title>
-    <meta name="description"
-        content="Search verified luxury properties in Mumbai. Expert real estate advisors for residential sales, commercial leasing, and property management since 1993.">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <meta name="description" content="Search verified luxury properties in Mumbai. Expert real estate advisors for residential sales, commercial leasing, and property management since 1993.">
+    <link rel="canonical" href="https://www.abhinavestates.com/" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Abhinav Estates",
+      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mumbai",
+        "addressRegion": "MH",
+        "addressCountry": "IN"
+      },
+      "telephone": "+919833838360",
+      "url": "https://www.abhinavestates.com",
+      "priceRange": "₹40,000 - ₹10,00,000",
+      "foundingDate": "1993"
+    }
+    </script>
 </head>
 
 <body>
 
     <header>
-        <nav class="container flex-between">
+        <nav class="container flex-between" aria-label="Main Navigation">
             <a href="index.html" class="logo">ABHINAV <span>ESTATES</span></a>
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Project</a>
+                    <a href="javascript:void(0)" class="dropbtn" aria-haspopup="true">Project</a>
                     <div class="dropdown-content">
                         <div class="nested-dropdown">
                             <a href="javascript:void(0)">Residential</a>
                             <div class="nested-content">
-                                <a href="res-rent.html">For Rent</a>
-                                <a href="res-sale.html">For Sale</a>
+                                <a href="res-rent.html">Residential For Rent</a>
+                                <a href="res-sale.html">Residential For Sale</a>
                                 <a href="list-property.html">Submit Your Listing</a>
                             </div>
                         </div>
                         <div class="nested-dropdown">
                             <a href="javascript:void(0)">Commercial</a>
                             <div class="nested-content">
-                                <a href="com-rent.html">For Rent</a>
-                                <a href="com-sale.html">For Sale</a>
+                                <a href="com-rent.html">Commercial For Rent</a>
+                                <a href="com-sale.html">Commercial For Sale</a>
                                 <a href="list-property.html">Submit Your Listing</a>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li><a href="services.html" class="active">Service</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -53,45 +71,47 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="hero-inner container text-center">
                 <span class="hero-badge">33 YEARS OF TRUSTED ADVISORY</span>
-                <h1>Find Your Perfect <br><span>Property in Mumbai</span></h1>
+                <h1 id="hero-title">Find Your Perfect <br><span>Property in Mumbai</span></h1>
 
                 <div class="search-container centered">
-                    <div class="search-tabs">
-                        <label class="tab-item">
-                            <input type="radio" name="stype" checked>
-                            <span class="tab-box">🏠 Rent</span>
-                        </label>
-                        <label class="tab-item">
-                            <input type="radio" name="stype">
-                            <span class="tab-box">🔑 Buy</span>
-                        </label>
-                    </div>
+                    <form action="#" role="search">
+                        <div class="search-tabs">
+                            <label class="tab-item">
+                                <input type="radio" name="stype" checked>
+                                <span class="tab-box">🏠 Rent</span>
+                            </label>
+                            <label class="tab-item">
+                                <input type="radio" name="stype">
+                                <span class="tab-box">🔑 Buy</span>
+                            </label>
+                        </div>
 
-                    <div class="search-main">
-                        <input type="text" placeholder="Search buildings, locations, or BHK...">
-                        <button class="btn-search-trigger">Search →</button>
-                    </div>
+                        <div class="search-main">
+                            <input type="text" placeholder="Search buildings, locations, or BHK..." aria-label="Search properties">
+                            <button type="submit" class="btn-search-trigger">Search →</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
 
-        <div class="stats-card container">
+        <section class="stats-card container" aria-label="Market Statistics">
             <div class="stat-box">
-                <h2>40,273</h2>
+                <div class="h2">40,273</div>
                 <p>Verified Properties</p>
             </div>
             <div class="stat-box">
-                <h2>19,237</h2>
+                <div class="h2">19,237</div>
                 <p>Buildings Covered</p>
             </div>
             <div class="stat-box">
-                <h2>33+</h2>
+                <div class="h2">33+</div>
                 <p>Years Experience</p>
             </div>
-        </div>
+        </section>
 
         <section class="container section-padding">
             <div class="text-center">
@@ -100,24 +120,24 @@
             </div>
 
             <div class="grid-3">
-                <div class="action-card">
-                    <div class="icon-circle blue">🛠️</div>
+                <article class="action-card">
+                    <div class="icon-circle blue" aria-hidden="true">🛠️</div>
                     <h3>Our Services</h3>
                     <p>NRI relocation, corporate leasing, and property asset management.</p>
                     <a href="services.html" class="btn-action b-blue">View Services →</a>
-                </div>
-                <div class="action-card">
-                    <div class="icon-circle gold">📜</div>
+                </article>
+                <article class="action-card">
+                    <div class="icon-circle gold" aria-hidden="true">📜</div>
                     <h3>About Us</h3>
                     <p>Legacy of Mumbai's first real estate family office since 1993.</p>
                     <a href="about.html" class="btn-action b-gold">Our Heritage →</a>
-                </div>
-                <div class="action-card">
-                    <div class="icon-circle green">📞</div>
+                </article>
+                <article class="action-card">
+                    <div class="icon-circle green" aria-hidden="true">📞</div>
                     <h3>Contact Us</h3>
                     <p>Connect with our senior advisors for a private consultation.</p>
                     <a href="contact.html" class="btn-action b-green">Get In Touch →</a>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -128,10 +148,9 @@
             </div>
 
             <div class="property-grid">
-                <div class="property-card">
+                <article class="property-card">
                     <div class="prop-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600"
-                            alt="Vithal Kunj">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600" alt="3 BHK Luxury Apartment Vithal Kunj Andheri West Sale">
                         <span class="tag-sale">For Sale</span>
                         <span class="price-tag">₹ 2.9 Cr</span>
                     </div>
@@ -143,12 +162,11 @@
                             <span>🏷️ Fully Furnished</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="property-card">
+                <article class="property-card">
                     <div class="prop-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=600"
-                            alt="Panorama Tower">
+                        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=600" alt="1 BHK Flat Panorama Tower Andheri West Sale">
                         <span class="tag-sale">For Sale</span>
                         <span class="price-tag">₹ 1.38 Cr</span>
                     </div>
@@ -160,12 +178,11 @@
                             <span>📐 640 sqft</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="property-card">
+                <article class="property-card">
                     <div class="prop-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600"
-                            alt="Shreepati Arcade">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600" alt="2 BHK Apartment Shreepati Arcade Kemps Corner Sale">
                         <span class="tag-sale">For Sale</span>
                         <span class="price-tag">₹ 6.5 Cr</span>
                     </div>
@@ -177,12 +194,11 @@
                             <span>🏷️ Semi Furnished</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="property-card">
+                <article class="property-card">
                     <div class="prop-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=600"
-                            alt="Bhoomi Gobind Bhavan">
+                        <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=600" alt="3 BHK Flat Bhoomi Gobind Bhavan Khar West Sale">
                         <span class="tag-sale">For Sale</span>
                         <span class="price-tag">₹ 5 Cr</span>
                     </div>
@@ -194,25 +210,24 @@
                             <span>📐 1200 sqft</span>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
 
             <div class="text-center">
-                <a href="res-sale.html" class="btn-view-all">View All For Sale →</a>
+                <a href="res-sale.html" class="btn-view-all">View All Properties For Sale →</a>
             </div>
         </section>
 
         <section class="container section-padding" style="padding-top: 40px;">
             <div class="text-center">
                 <h2 class="section-title">Home for <span>Rent</span></h2>
-                <p class="section-subtitle">Fully furnished, semi furnished & unfurnished apartments on lease</p>
+                <p class="section-subtitle">Fully furnished & semi-furnished apartments on lease in Mumbai</p>
             </div>
 
             <div class="property-grid">
-                <div class="property-card">
+                <article class="property-card">
                     <div class="prop-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=600"
-                            alt="Llyod Estate">
+                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=600" alt="2 BHK Furnished Apartment Llyod Estate Wadala Rent">
                         <span class="tag-rent">For Rent</span>
                         <span class="price-tag">₹ 40,000 /mo</span>
                     </div>
@@ -225,12 +240,11 @@
                             <span>🏷️ Fully Furnished</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="property-card">
+                <article class="property-card">
                     <div class="prop-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=600"
-                            alt="Seven Bunglows">
+                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=600" alt="3 BHK Apartment Seven Bunglows Andheri West Rent">
                         <span class="tag-rent">For Rent</span>
                         <span class="price-tag">₹ 60,000 /mo</span>
                     </div>
@@ -243,12 +257,11 @@
                             <span>🏷️ Semi Furnished</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="property-card">
+                <article class="property-card">
                     <div class="prop-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600"
-                            alt="Windermere">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600" alt="Luxury 3 BHK Apartment Windermere Andheri Rent">
                         <span class="tag-rent">For Rent</span>
                         <span class="price-tag">POA</span>
                     </div>
@@ -261,12 +274,11 @@
                             <span>🏷️ Unfurnished</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="property-card">
+                <article class="property-card">
                     <div class="prop-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=600"
-                            alt="Raheja Vista">
+                        <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=600" alt="4 BHK Semi Furnished Raheja Vista Powai Rent">
                         <span class="tag-rent">For Rent</span>
                         <span class="price-tag">₹ 90,000 /mo</span>
                     </div>
@@ -279,11 +291,11 @@
                             <span>🏷️ Semi Furnished</span>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
 
             <div class="text-center">
-                <a href="res-rent.html" class="btn-view-all">View All Rentals →</a>
+                <a href="res-rent.html" class="btn-view-all">View All Mumbai Rentals →</a>
             </div>
         </section>
     </main>
@@ -294,18 +306,17 @@
                 <h4>Abhinav Estates</h4>
                 <p>Leading the Mumbai property market with integrity and expertise since 1993.</p>
             </div>
-            <div class="footer-col">
-                <h4>Navigation</h4>
+            <nav class="footer-col" aria-label="Footer Navigation">
+                <h4>Quick Links</h4>
                 <a href="index.html">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="services.html">Services</a>
                 <a href="contact.html">Contact Us</a>
-                <a href="list-property.html">Complete Your Listing</a>
-            </div>
+            </nav>
             <div class="footer-col">
-                <h4>Get Support</h4>
-                <p>📞 +91 9833838360</p>
-                <p>✉️ abhinavestate@gmail.com</p>
+                <h4>Contact Details</h4>
+                <p>📞 <a href="tel:+919833838360" style="color: inherit; text-decoration: none;">+91 9833838360</a></p>
+                <p>✉️ <a href="mailto:abhinavestate@gmail.com" style="color: inherit; text-decoration: none;">abhinavestate@gmail.com</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -313,37 +324,23 @@
         </div>
     </footer>
 
-
-
     <script>
         const heroSection = document.querySelector('.hero');
-
-        // Array of 5 High-Quality Mumbai/Luxury Real Estate images
         const images = [
-            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1500', // Luxury Villa
-            'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1500', // Modern Tower
-            'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1500', // Modern Interior
-            'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1500', // Penthouse View
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1500'  // Luxury Estate
+            'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1500',
+            'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1500',
+            'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1500',
+            'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1500',
+            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1500'
         ];
 
         let currentIndex = 0;
-
         function changeBg() {
             currentIndex = (currentIndex + 1) % images.length;
-            // Maintaining your specific white gradient overlay for text readability
             heroSection.style.backgroundImage = `linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('${images[currentIndex]}')`;
         }
-
-        // Slide every 4000 milliseconds (4 seconds)
         setInterval(changeBg, 4000);
     </script>
 
-
-
-
-
-
 </body>
-
 </html>
