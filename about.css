@@ -1,0 +1,120 @@
+/* --- Enhanced Design Styling --- */
+
+.about-hero {
+    padding: 180px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url('https://images.unsplash.com/photo-1570160813948-2993d5944b0a?auto=format&fit=crop&w=1500');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax effect for "style" */
+    color: white;
+}
+
+.hero-content-wrap {
+    animation: fadeInDown 1s ease-out;
+}
+
+.about-hero h1 {
+    font-size: 4.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.content-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--primary-gold);
+    margin: 30px auto;
+    border-radius: 2px;
+}
+
+.large-text-block {
+    max-width: 1050px;
+    margin: 0 auto 80px;
+    padding: 20px;
+}
+
+.styled-para {
+    font-size: 1.35rem;
+    line-height: 2;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 400;
+    opacity: 0.9;
+    position: relative;
+}
+
+/* Designed Card Styles */
+.card-styled {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.card-styled:hover {
+    transform: translateY(-15px) scale(1.02) !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1) !important;
+}
+
+.icon-circle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Shadow Colors for Icons */
+.shadow-blue {
+    box-shadow: 0 10px 20px rgba(30, 136, 229, 0.2);
+}
+
+.shadow-purple {
+    box-shadow: 0 10px 20px rgba(142, 36, 170, 0.2);
+}
+
+.shadow-green {
+    box-shadow: 0 10px 20px rgba(67, 160, 71, 0.2);
+}
+
+/* Keep your requested colors but soften them for "Design" */
+.mission-box {
+    background: linear-gradient(135deg, #ffffff, #e3f2fd) !important;
+}
+
+.vision-box {
+    background: linear-gradient(135deg, #ffffff, #f3e5f5) !important;
+}
+
+.value-box {
+    background: linear-gradient(135deg, #ffffff, #e8f5e9) !important;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 992px) {
+    .about-hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .styled-para {
+        font-size: 1.15rem;
+        text-align: left;
+    }
+}

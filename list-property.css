@@ -1,0 +1,199 @@
+/* --- Luxury List Property Styles --- */
+
+.luxury-bg-texture {
+    background-color: #f8fafc;
+    background-image: radial-gradient(#e2e8f0 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+}
+
+.list-hero-premium {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 100px 0 120px;
+    color: white;
+}
+
+.list-hero-premium h1 span {
+    color: var(--primary-gold);
+}
+
+.stats-grid-luxury {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.stat-box h2 {
+    font-size: 3rem;
+    color: var(--primary-gold);
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    opacity: 0.8;
+}
+
+/* Features Styling */
+.features-designer {
+    margin-top: -80px;
+}
+
+.f-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(197, 160, 89, 0.1);
+}
+
+.f-icon-wrap {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Form Card Styling */
+.form-section-wrap {
+    padding-bottom: 100px;
+}
+
+.compact-form-card {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-title h2 {
+    font-size: 2rem;
+    color: #1e293b;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.input-luxury label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #64748b;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.input-luxury input,
+.input-luxury select,
+.input-luxury textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #f1f5f9;
+    background: #f8fafc;
+    /* Texture color */
+    border-radius: 12px;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.input-luxury input:focus {
+    border-color: var(--primary-gold);
+    background: white;
+    outline: none;
+}
+
+.full-row {
+    grid-column: span 2;
+    margin-top: 10px;
+}
+
+/* Light Blue Submit Button */
+.btn-submit-sky {
+    width: 100%;
+    background: #7dd3fc;
+    /* Light Sky Blue */
+    color: #0369a1;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit-sky:hover {
+    background: #38bdf8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Standalone WhatsApp Box */
+.whatsapp-luxury-box {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #f0fdf4;
+    border: 1px solid #dcfce7;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.w-inner {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.w-icon-large {
+    font-size: 2.5rem;
+}
+
+.w-info h3 {
+    color: #166534;
+    margin-bottom: 5px;
+}
+
+.w-info p {
+    color: #166534;
+    line-height: 1.6;
+}
+
+.w-info a {
+    color: #15803d;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .stats-grid-luxury {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .full-row {
+        grid-column: span 1;
+    }
+
+    .compact-form-card {
+        padding: 30px;
+    }
+
+    .w-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}

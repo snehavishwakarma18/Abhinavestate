@@ -1,0 +1,523 @@
+/* --- Global Variables & Base --- */
+:root {
+    --primary-gold: #c5a059;
+    --dark-bg: #1a1a1a;
+    --white: #ffffff;
+    --light-gray: #f4f4f4;
+    --text-main: #333;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Navigation & Dropdowns --- */
+header {
+    background: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--dark-bg);
+}
+
+.logo span {
+    color: var(--primary-gold);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary-gold);
+}
+
+/* --- Dropdown Menu --- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--white);
+    min-width: 200px;
+    box-shadow: var(--shadow);
+    top: 100%;
+    border-top: 3px solid var(--primary-gold);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nested-dropdown {
+    position: relative;
+}
+
+.nested-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: var(--white);
+    min-width: 200px;
+    box-shadow: var(--shadow);
+}
+
+.nested-dropdown:hover .nested-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+/* --- UPDATED: Navigation List Property Button --- */
+.btn-list {
+    background: #e74c3c;
+    /* Red Box */
+    color: #ffffff !important;
+    /* White Text */
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    /* Bold Text */
+    font-size: 0.9rem;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-list:hover {
+    background: #c0392b;
+    /* Darker red on hover */
+    transform: translateY(-2px);
+}
+
+/* --- Hero & Search Tabs --- */
+.hero {
+    padding: 100px 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1500');
+    background-size: cover;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: var(--primary-gold);
+}
+
+.search-container.centered {
+    max-width: 700px;
+    margin: 40px auto 0;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.search-tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.tab-item {
+    cursor: pointer;
+}
+
+.tab-item input[type="radio"] {
+    display: none;
+}
+
+.tab-box {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--light-gray);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.tab-item input[type="radio"]:checked+.tab-box {
+    background: var(--dark-bg);
+    color: var(--white);
+}
+
+.search-main {
+    display: flex;
+    gap: 10px;
+}
+
+.search-main input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    outline: none;
+}
+
+.btn-search-trigger {
+    background: var(--primary-gold);
+    color: white;
+    border: none;
+    padding: 0 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* --- Stats --- */
+.stats-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--white);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin-top: -60px;
+    position: relative;
+    text-align: center;
+}
+
+/* --- UPDATED: Action Cards Section --- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.action-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+.action-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+/* Buttons inside action cards */
+.btn-action {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 15px;
+    transition: var(--transition);
+}
+
+.b-blue {
+    background: #e3f2fd;
+    color: #1e88e5;
+}
+
+/* Light Blue Box */
+.b-gold {
+    background: #f3e5f5;
+    color: #8e24aa;
+}
+
+/* Purple Box for Heritage */
+.b-green {
+    background: #e8f5e9;
+    color: #43a047;
+}
+
+/* Light Green Box */
+
+.b-blue:hover {
+    background: #1e88e5;
+    color: white;
+}
+
+.b-gold:hover {
+    background: #8e24aa;
+    color: white;
+}
+
+.b-green:hover {
+    background: #43a047;
+    color: white;
+}
+
+/* --- Property Cards --- */
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.section-title span {
+    color: var(--primary-gold);
+}
+
+.section-subtitle {
+    color: #777;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.property-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+.prop-img-wrap {
+    position: relative;
+    height: 220px;
+}
+
+.prop-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tag-sale,
+.tag-rent {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: white;
+}
+
+.tag-sale {
+    background: #e74c3c;
+}
+
+.tag-rent {
+    background: #3498db;
+}
+
+.price-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(26, 26, 26, 0.9);
+    color: var(--white);
+    padding: 7px 15px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.prop-details {
+    padding: 20px;
+}
+
+.prop-details h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.location {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+}
+
+.specs span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555;
+    background: #f9f9f9;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.btn-view-all {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 40px;
+    background: var(--dark-bg);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.btn-view-all:hover {
+    background: var(--primary-gold);
+}
+
+/* --- Footer --- */
+.main-footer {
+    background: var(--dark-bg);
+    color: var(--white);
+    padding: 80px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h4 {
+    color: var(--primary-gold);
+    margin-bottom: 25px;
+}
+
+.footer-col a,
+.footer-col p {
+    color: #aaa;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 992px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* --- Animation: Image Zoom on Hover --- */
+.prop-img-wrap {
+    overflow: hidden;
+    /* Ensures image doesn't spill out when zooming */
+}
+
+.prop-img-wrap img {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Only animates when cursor is over the image/card */
+.property-card:hover .prop-img-wrap img {
+    transform: scale(1.1);
+}
+
+/* --- Hero Slider Transition Setup --- */
+.hero {
+    transition: background-image 1s ease-in-out;
+    /* Smooth fade between images */
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+.hero {
+    /* Existing styles... */
+    transition: background-image 1.2s ease-in-out;
+    /* Smooth fade effect */
+    background-position: center;
+    background-size: cover;
+}
+
+/* Hover effect for all property and action images */
+.property-card:hover .prop-img-wrap img,
+.action-card:hover .icon-circle {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
