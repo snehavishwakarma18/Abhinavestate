@@ -36,17 +36,24 @@
         <nav class="container flex-between" aria-label="Main Navigation">
             <a href="index.html" class="logo">ABHINAV <span>ESTATES</span></a>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+            <button class="menu-toggle" aria-label="Toggle Menu" id="menu-open">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-overlay" id="nav-overlay"></div>
+
+            <ul class="nav-links" id="nav-menu">
+                <li class="mobile-only"><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn" aria-haspopup="true">Project</a>
+                    <a href="javascript:void(0)" class="dropbtn">Project</a>
                     <div class="dropdown-content">
                         <div class="nested-dropdown">
                             <a href="javascript:void(0)">Residential</a>
                             <div class="nested-content">
                                 <a href="res-rent.html">Residential For Rent</a>
                                 <a href="res-sale.html">Residential For Sale</a>
-                                <a href="list-property.html">Submit Your Listing</a>
                             </div>
                         </div>
                         <div class="nested-dropdown">
@@ -54,7 +61,6 @@
                             <div class="nested-content">
                                 <a href="com-rent.html">Commercial For Rent</a>
                                 <a href="com-sale.html">Commercial For Sale</a>
-                                <a href="list-property.html">Submit Your Listing</a>
                             </div>
                         </div>
                     </div>
@@ -62,14 +68,14 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li class="mobile-only"><a href="list-property.html" class="btn-list">List Property</a></li>
             </ul>
 
-            <div class="nav-right">
+            <div class="nav-right desktop-only">
                 <a href="list-property.html" class="btn-list">List Property</a>
             </div>
         </nav>
     </header>
-
     <main>
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-inner container text-center">
@@ -340,7 +346,88 @@
             heroSection.style.backgroundImage = `linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('${images[currentIndex]}')`;
         }
         setInterval(changeBg, 4000);
+
+
+
+
+/* --- Mobile Menu Logic --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: var(--dark-bg);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+    .menu-toggle { display: flex; }
+    .desktop-only { display: none; }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden by default */
+        width: 280px;
+        height: 100vh;
+        background: var(--white);
+        flex-direction: column;
+        padding: 80px 30px;
+        transition: 0.4s ease-in-out;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        gap: 20px;
+    }
+
+    .nav-links.active { right: 0; }
+    .nav-overlay.active { display: block; }
+
+    /* Dropdown adjustments for mobile */
+    .dropdown-content, .nested-content {
+        position: static;
+        display: block;
+        box-shadow: none;
+        border: none;
+        padding-left: 15px;
+        background: transparent;
+    }
+    
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* Toggle Animation */
+    .menu-toggle.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+}
+
+
+
+        
     </script>
 
 </body>
 </html>
+
